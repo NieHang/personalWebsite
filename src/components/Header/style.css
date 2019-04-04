@@ -1,0 +1,122 @@
+.header {
+	padding: 0 200px;
+	height: 70px;
+	background-color: #333f6a;
+}
+
+.header__title {
+  position: relative;
+  display: inline-block;
+  height: 100%;
+  cursor: pointer;
+}
+
+.header__title > img {
+  position: absolute;
+  top: 50%;
+  width: 50px;
+  transform:translateY(-50%);
+  padding-right: 10px;
+}
+
+.header__title > .cat {
+  display: inline-block;
+  margin-left: 60px;
+  letter-spacing: 1.3px;
+  line-height: 70px;
+}
+
+.header__title span {
+  display: inline-block;
+  font-size: 22px;
+  color: #ffffc2;
+}
+
+.header__title > .cat:hover > span:nth-child(1) {
+  animation: fontJump1 .5s ease-in-out;
+}
+
+.header__title > .cat:hover > span:nth-child(2) {
+  animation: fontJump2 .5s ease-in-out 30ms;
+}
+
+.header__title > .cat:hover > span:nth-child(3) {
+  animation: fontJump3 .5s ease-in-out 60ms;
+}
+
+.header__title > .cat:hover > span:nth-child(4) {
+  animation: fontJump4 .5s ease-in-out 90ms;
+}
+
+@keyframes fontJump1 {
+  from {
+    transform:translateY(-30%);
+  }
+  to {
+    transform:translateY(0%);
+  }
+}
+
+@keyframes fontJump2 {
+  from {
+    transform:translateY(-25%);
+  }
+  to {
+    transform:translateY(0%);
+  }
+}
+
+@keyframes fontJump3 {
+  from {
+    transform:translateY(-20%);
+  }
+  to {
+    transform:translateY(0%);
+  }
+}
+
+@keyframes fontJump4 {
+  from {
+    transform:translateY(-15%);
+  }
+  to {
+    transform:translateY(0%);
+  }
+}
+
+.header__list {
+  display: flex;
+  float: right;
+  justify-content: space-around;
+  width: 500px;
+}
+
+.header__list > a {
+  color: #fff;
+  position: relative;
+  text-decoration: none;
+  line-height: 70px;
+  font-size: 18px;
+  transition: color .3s cubic-bezier(.785,.135,.15,.86);
+}
+
+.header__list > a:hover {
+  color: #ffffc2;
+}
+
+.header__list > a::after {
+  content: '';
+  position: absolute;
+  width: 0px;
+  height: 2px;
+  opacity: 0;
+  left: 0;
+  bottom: 17px;
+  background-color: #ffffc2;
+  transition: width .3s cubic-bezier(.785,.135,.15,.86),opacity .3s cubic-bezier(.785,.135,.15,.86);
+}
+
+.header__list > a:hover::after {
+  width: 23px;
+  opacity: 1;
+}
