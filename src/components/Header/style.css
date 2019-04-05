@@ -1,7 +1,10 @@
 .header {
-	padding: 0 200px;
-	height: 70px;
-	background-color: #333f6a;
+  position: absolute;
+  width: 1200px;
+  height: 70px;
+  left: 50%;
+  margin-left: -600px;
+  z-index: 999;
 }
 
 .header__title {
