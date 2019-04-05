@@ -1,50 +1,117 @@
+@media screen and (max-width: 960px) {
+	.control,
+	.control__true {
+		width: 25px;
+	}
+
+	.control__true {
+		width: 350px;
+	}
+
+	.control::before,
+	.control__true::before {
+		bottom: 14%;
+	}
+
+	@keyframes cat {
+		form {
+			left: -150px;
+		}
+		to {
+			left: 370px;
+		}
+	}
+	
+	@keyframes catY {
+		form {
+			left: 100px;
+		}
+		to {
+			left: -600px;
+		}
+	}
+}
+@media screen and (min-width: 960px) {
+	.control,
+	.control__true {
+		width: 50px;
+	}
+
+	.control__true {
+		width: 1400px;
+	}
+
+	.control::before,
+	.control__true::before {
+		bottom: 13%;
+	}
+
+	@keyframes cat {
+		form {
+			left: -250px;
+		}
+		to {
+			left: 1600px;
+		}
+	}
+	
+	@keyframes catY {
+		form {
+			left: 200px;
+		}
+		to {
+			left: -1600px;
+		}
+	}
+}
 .control,
 .control__true {
 	position: absolute;
-	width: 50px;
 	top: 0;
 	right: 0;
 	bottom: 0;
 	cursor: pointer;
-	transform: translate3d(0, 0, 0);
+	transform: translateX(0);
 	background-color: #fc5d42;
 	border-left: 2px solid #ffffc2;
-	transition: all .5s ease-in;
+	transition: all 0.5s ease-in;
 	z-index: 1;
 }
 
-.control__true {
-	transform: translate3d(-1400px, 0, 0);
-}
-
-@keyframes borderRadius {
-	10% {
-		border-radius: 50%/100px;
-	}
-	99% {
-		border-radius: 0%;
-	}
-}
-
-.control::after,.control__true::after {
-	content: '';
+.control__rhombus {
 	position: absolute;
 	width: 30px;
 	height: 30px;
-	transform: rotate(45deg);
+	transform: rotate(45deg) translateX(-26px);
 	border: 2px solid #ffffc2;
-	left: -38%;
 	bottom: 10%;
 }
 
-.control::before,.control__true::before {
+.control__cat,
+.control__cat__Y {
+	position: absolute;
+	width: 100px;
+	height: 30px;
+	left: -250px;
+	bottom: 12%;
+	z-index: 1;
+	animation: cat 10s ease-in-out infinite;
+}
+
+.control__cat__Y {
+	left: 100px;
+	transform: rotateY(180deg);
+	animation: catY 10s ease-in-out infinite;
+}
+
+.control::before,
+.control__true::before {
 	content: '';
 	position: absolute;
 	width: 15px;
 	height: 15px;
 	transform: rotate(45deg);
 	border: 2px solid #ffffc2;
-	bottom: 11%;
 }
 
 .control::before {
