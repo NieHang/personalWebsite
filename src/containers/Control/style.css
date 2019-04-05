@@ -1,0 +1,84 @@
+.control,
+.control__true {
+	position: absolute;
+	width: 50px;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	cursor: pointer;
+	transform: translate3d(0, 0, 0);
+	background-color: #fc5d42;
+	border-left: 2px solid #ffffc2;
+	transition: all .5s ease-in;
+	z-index: 1;
+}
+
+.control__true {
+	transform: translate3d(-1400px, 0, 0);
+}
+
+@keyframes borderRadius {
+	10% {
+		border-radius: 50%/100px;
+	}
+	99% {
+		border-radius: 0%;
+	}
+}
+
+.control::after,.control__true::after {
+	content: '';
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	transform: rotate(45deg);
+	border: 2px solid #ffffc2;
+	left: -38%;
+	bottom: 10%;
+}
+
+.control::before,.control__true::before {
+	content: '';
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	transform: rotate(45deg);
+	border: 2px solid #ffffc2;
+	bottom: 11%;
+}
+
+.control::before {
+	border-right: none;
+	border-top: none;
+	left: -50px;
+	animation: controlBefore 2s ease infinite;
+}
+
+.control__true::before {
+	border-left: none;
+	border-bottom: none;
+	left: 50px;
+	animation: controlTrueBefore 2s ease infinite;
+}
+
+@keyframes controlBefore {
+	from {
+		opacity: 0;
+		left: -20px;
+	}
+	to {
+		opacity: 1;
+		left: -60px;
+	}
+}
+
+@keyframes controlTrueBefore {
+	from {
+		opacity: 0;
+		left: 0px;
+	}
+	to {
+		opacity: 1;
+		left: 50px;
+	}
+}

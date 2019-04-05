@@ -6,9 +6,8 @@ import './style.css';
 export default class Home extends Component {
 	render() {
 		return (
-			<div className="wrap">
+			<div className={this.props.status ? 'wrap__true' : 'wrap'}>
 				<Header />
-				<Footer />
 			</div>
 		);
 	}
