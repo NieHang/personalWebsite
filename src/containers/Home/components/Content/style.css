@@ -32,7 +32,7 @@
   position: relative;
   display: flex;
   height: 300px;
-  margin: 50px auto;
+  margin: 100px auto;
   flex-direction: column;
   justify-content: center;
   z-index: 3;
