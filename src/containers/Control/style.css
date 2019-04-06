@@ -8,11 +8,6 @@
 		width: 350px;
 	}
 
-	.control::before,
-	.control__true::before {
-		bottom: 14%;
-	}
-
 	@keyframes cat {
 		form {
 			left: -150px;
@@ -41,11 +36,6 @@
 		width: 1400px;
 	}
 
-	.control::before,
-	.control__true::before {
-		bottom: 13%;
-	}
-
 	@keyframes cat {
 		form {
 			left: -250px;
@@ -66,6 +56,8 @@
 }
 .control,
 .control__true {
+	display: flex;
+	align-items: center;
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -78,13 +70,40 @@
 	z-index: 1;
 }
 
-.control__rhombus {
+.control__change {
 	position: absolute;
+	bottom: 10%;
+}
+
+.control__rhombus {
+	display: block;
 	width: 30px;
 	height: 30px;
 	transform: rotate(45deg) translateX(-26px);
 	border: 2px solid #ffffc2;
-	bottom: 10%;
+}
+
+.control__leftRow,.control__rightRow {
+	content: '';
+	position: absolute;
+	display: block;
+	width: 15px;
+	height: 15px;
+	border: 2px solid #ffffc2;
+}
+
+.control__leftRow {
+	transform: rotate(45deg) translateX(-50px) translateY(-11px);
+	border-right: none;
+	border-top: none;
+	animation: controlBefore 2s ease infinite;
+}
+
+.control__rightRow {
+	transform: rotate(45deg) translateX(-28px) translateY(-33px);
+	border-left: none;
+	border-bottom: none;
+	animation: controlTrueBefore 2s ease infinite;
 }
 
 .control__cat,
@@ -102,30 +121,6 @@
 	left: 100px;
 	transform: rotateY(180deg);
 	animation: catY 10s ease-in-out infinite;
-}
-
-.control::before,
-.control__true::before {
-	content: '';
-	position: absolute;
-	width: 15px;
-	height: 15px;
-	transform: rotate(45deg);
-	border: 2px solid #ffffc2;
-}
-
-.control::before {
-	border-right: none;
-	border-top: none;
-	left: -50px;
-	animation: controlBefore 2s ease infinite;
-}
-
-.control__true::before {
-	border-left: none;
-	border-bottom: none;
-	left: 50px;
-	animation: controlTrueBefore 2s ease infinite;
 }
 
 @keyframes controlBefore {
