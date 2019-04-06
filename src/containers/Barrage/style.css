@@ -40,7 +40,9 @@
 
 .barrage__item {
   position: absolute;
-  animation: barrageMove 10s ease infinite;
+  width: max-content;
+  font-size: 20px;
+  animation: barrageMove 10s ease-out infinite;
 }
 
 .barrage__form {
