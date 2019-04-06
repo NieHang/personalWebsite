@@ -9,8 +9,9 @@ export default class ListMobile extends Component {
 		return (
 			<div className={showList ? (bgColor ? "list__show bgColor" : 'list__show') : 'list__hide'}>
 				<ul className="list__links">
-					<Link to="/project">Project</Link>
-					<Link to="/link">Link</Link>
+					<Link to="/" onClick={this.handleClick.bind(this, showList)}>Home</Link>
+					<Link to="/project" onClick={this.handleClick.bind(this, showList)}>Project</Link>
+					<Link to="/barrage" onClick={this.handleClick.bind(this, showList)}>Barrage</Link>
 					<div className="list__contacts">
 						<img
 							src="https://i.loli.net/2019/04/05/5ca72974ccc87.png"
@@ -26,5 +27,11 @@ export default class ListMobile extends Component {
 				</ul>
 			</div>
 		);
+	}
+
+	handleClick(showList) {
+		if (this.props.changeListStatus) {
+			this.props.changeListStatus(showList);
+		}
 	}
 }

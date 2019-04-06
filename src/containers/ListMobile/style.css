@@ -1,6 +1,5 @@
 .list__show {
   position: absolute;
-  display: block;
   top: 0;
   left: 0;
   width: 100%;
@@ -16,6 +15,8 @@
 }
 
 .list__hide {
+  position: absolute;
+  top: -140px;
   opacity: 0;
   transition: opacity 1s ease;
 }
