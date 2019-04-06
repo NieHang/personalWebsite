@@ -2,9 +2,12 @@
   "name": "personalwebsite",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://www.goahead.xin",
   "dependencies": {
+    "axios": "^0.18.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "react-draggable": "^3.2.1",
     "react-redux": "^6.0.1",
     "react-router-dom": "^5.0.0",
     "react-scripts": "2.1.8",
