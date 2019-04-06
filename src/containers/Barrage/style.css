@@ -1,0 +1,82 @@
+@media screen and (max-width: 960px) {
+  .barrage__item {
+    left: 400px;
+  }
+  
+  @keyframes barrageMove {
+    form {
+      left: 400px;
+    }
+    to {
+      left: -200px;
+    }
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .barrage {
+    width: 400px;
+  }
+
+  .barrage__item {
+    left: 1000px;
+  }
+  
+  @keyframes barrageMove {
+    form {
+      left: 1000px;
+    }
+    to {
+      left: -700px;
+    }
+  }
+}
+
+.barrage {
+  position: relative;
+  margin: 0 auto;
+  z-index: 4;
+}
+
+.barrage__item {
+  position: absolute;
+  animation: barrageMove 10s ease infinite;
+}
+
+.barrage__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.barrage__form > p:nth-child(2),p:nth-child(3) {
+  margin: 10px 0;
+  color: #ffffc2;
+}
+
+.barrage__form > p:nth-child(4) {
+  display: flex;
+  align-items: center;
+  width: 220px;
+  height: 40px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.barrage__form > p:nth-child(4) > input {
+  width: 150px;
+  height: 30px;
+  outline: #ffffc2;
+  border-radius: 5px;
+  border: 1px solid #eee;
+  font-size: 20px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.barrage__form > p:nth-child(4) > img {
+  width: 50px;
+  margin-left: 10px;
+  cursor: pointer;
+}
