@@ -12,21 +12,28 @@ export default class Header extends Component {
 	}
 
 	render() {
-		const {status} = this.props;
+		const { status } = this.props;
 		let Component;
 		if (!this.state.isMobile) {
 			Component = function() {
 				return (
 					<nav className="header__list">
 						<Link to="/">Home</Link>
-						<Link to='/project'>Project</Link>
-						<Link to='/barrage'>Barrage</Link>
+						<Link to="/project">Project</Link>
+						<Link to="/barrage">Barrage</Link>
 					</nav>
 				);
 			};
 		} else {
 			Component = () => {
-				return <span className="header__list" onClick={this.showList.bind(this, status)}>· · ·</span>;
+				return (
+					<span
+						className="header__list"
+						onClick={this.showList.bind(this, status)}
+					>
+						· · ·
+					</span>
+				);
 			};
 		}
 
@@ -51,6 +58,11 @@ export default class Header extends Component {
 	}
 
 	componentDidMount() {
+		if (document.body.clientWidth < 960) {
+			this.setState({
+				isMobile: true
+			});
+		}
 		this.screenChange();
 	}
 
@@ -73,7 +85,7 @@ export default class Header extends Component {
 	componentWillUnmount() {
 		window.removeEventListener('resize', this.resize);
 	}
-	
+
 	showList(showList) {
 		if (this.props.changeListStatus) {
 			this.props.changeListStatus(showList);
