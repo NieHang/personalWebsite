@@ -1,27 +1,4 @@
-@media screen and (max-width: 960px) {
-  .content {
-    width: 370px;
-  }
-
-  .content__media {
-    margin-top: 20px;
-    height: 100px;
-  }
-
-  .content__media img {
-    width: 80px;
-  }
-
-  .content__media > a {
-    display: inline-block;
-    height: 100%;
-    margin: 20px;
-  }
-  
-  .content__media > a:nth-child(3) {
-    vertical-align: middle;
-  }
-}
+@import './mobile.css';
 
 @media screen and (min-width: 960px) {
   .content {
