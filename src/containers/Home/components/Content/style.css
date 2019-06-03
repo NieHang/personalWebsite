@@ -1,52 +1,15 @@
 @import './mobile.css';
-
-@media screen and (min-width: 960px) {
-  .content {
-    width: 1000px;
-  }
-
-  .content__title::selection {
-    background-color: rgba(0, 0, 0, .5);
-    color: #fff;
-  }
-
-  .content__media {
-    width: 800px;
-    height: 200px;
-    margin: 20px auto;
-  }
-
-  .content__media > a {
-    display: inline-block;
-    width: 200px;
-    height: 200px;
-    margin: 30px;
-  }
-  
-  .content__media > a:nth-child(3) {
-    vertical-align: middle;
-  }
-
-  .content__media img {
-    width: 150px;
-    padding: 25px;
-    transition: all .5s ease;
-  }
-
-  .content__media > a:nth-child(3) > img {
-    margin-top: -50px;
-  }
-  
-  .content__media img:hover {
-    width: 200px;
-  }
-}
+@import './pc.css';
 
 .content {
-  position: relative;
+  position: absolute;
   display: flex;
   height: 300px;
-  margin: 100px auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
   flex-direction: column;
   justify-content: center;
   z-index: 3;

@@ -1,24 +1,26 @@
 @media screen and (max-width: 960px) {
 	.content {
-		width: 370px;
+		width: 90%;
 	}
 
 	.content__media {
+		display: flex;
+    justify-content: space-around;
 		margin-top: 20px;
 		height: 100px;
 	}
 
 	.content__media img {
-		width: 80px;
+		position: absolute;
+		top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+		width: 70px;
 	}
 
 	.content__media > a {
+		position: relative;
 		display: inline-block;
 		height: 100%;
-		margin: 20px;
-	}
-
-	.content__media > a:nth-child(3) {
-		vertical-align: middle;
 	}
 }
