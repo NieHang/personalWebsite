@@ -1,0 +1,73 @@
+@media screen and (min-width: 960px) {
+	.control,
+	.control__true {
+		width: 50px;
+	}
+
+	.control__true {
+		width: 90%;
+	}
+
+	.control__rhombus {
+		display: block;
+		width: 30px;
+		height: 30px;
+		transform: rotate(45deg) translateX(-27.5px);
+		border: 2px solid #ffffc2;
+	}
+	
+	.control__leftRow,.control__rightRow {
+		position: absolute;
+		width: 100px;
+	}
+	
+	.control__leftRow {
+		transform: rotate(180deg) translateY(84.5px);
+		animation: controlBefore 2s ease infinite;
+	}
+	
+	.control__rightRow {
+		transform: translateY(-87px);
+		animation: controlTrueBefore 2s ease infinite;
+	}
+
+	@keyframes cat {
+		form {
+			left: -250px;
+		}
+		to {
+			left: 120vw;
+		}
+	}
+	
+	@keyframes catY {
+		form {
+			left: 250px;
+		}
+		to {
+			left: -120vw;
+		}
+	}
+
+	@keyframes controlBefore {
+		from {
+			opacity: 0;
+			left: -70px;
+		}
+		to {
+			opacity: 1;
+			left: -90px;
+		}
+	}
+	
+	@keyframes controlTrueBefore {
+		from {
+			opacity: 0;
+			left: -30px;
+		}
+		to {
+			opacity: 1;
+			left: -10px;
+		}
+	}
+}

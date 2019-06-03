@@ -1,0 +1,78 @@
+@media screen and (max-width: 960px) {
+	.control,
+	.control__true {
+		width: 25px;
+	}
+
+	.control__true {
+		width: 92vw;
+	}
+
+	.control__rhombus {
+		display: block;
+		width: 20px;
+		height: 20px;
+		transform: rotate(45deg) translateX(-17px);
+		border: 2px solid #ffffc2;
+	}
+	
+	.control__leftRow,.control__rightRow {
+		position: absolute;
+		width: 40px;
+		height: 40px;
+	}
+	
+	.control__leftRow {
+		transform: rotate(180deg) translateY(43.5px);
+		animation: controlBefore 2s ease infinite;
+	}
+	
+	.control__rightRow {
+		transform: translateY(-45px);
+		animation: controlTrueBefore 2s ease infinite;
+	}
+
+	/* 猫向右跑 */
+	@keyframes cat {
+		form {
+			left: -150px;
+		}
+		to {
+			left: 120vw;
+		}
+	}
+	
+	/* 猫向左跑 */
+	@keyframes catY {
+		form {
+			left: 100px;
+		}
+		to {
+			left: -120vw;
+		}
+	}
+
+	/* 左箭头 */
+	@keyframes controlBefore {
+		from {
+			opacity: 0;
+			left: -20px;
+		}
+		to {
+			opacity: 1;
+			left: -50px;
+		}
+	}
+	
+	/* 右箭头 */
+	@keyframes controlTrueBefore {
+		from {
+			opacity: 0;
+			left: 0px;
+		}
+		to {
+			opacity: 1;
+			left: 10px;
+		}
+	}
+}
