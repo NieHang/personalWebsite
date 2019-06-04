@@ -9,10 +9,10 @@
   
   @keyframes barrageMove {
     form {
-      left: 400px;
+      left: 20vw;
     }
     to {
-      left: -200px;
+      left: -70vw;
     }
   }
 }
@@ -32,10 +32,10 @@
   
   @keyframes barrageMove {
     form {
-      left: 1000px;
+      left: 120vw;
     }
     to {
-      left: -700px;
+      left: -70vw;
     }
   }
 }
@@ -52,7 +52,7 @@
   position: absolute;
   width: max-content;
   font-size: 10px;
-  animation: barrageMove 10s ease-out infinite;
+  animation: barrageMove 10s ease-out;
 }
 
 .barrage__form {
