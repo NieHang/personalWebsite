@@ -2,6 +2,10 @@
   .barrage__item {
     left: 400px;
   }
+
+  .barrage__form > img {
+    width: 75px;
+  }
   
   @keyframes barrageMove {
     form {
@@ -21,6 +25,10 @@
   .barrage__item {
     left: 1000px;
   }
+
+  .barrage__form > img {
+    width: 150px;
+  }
   
   @keyframes barrageMove {
     form {
@@ -33,15 +41,17 @@
 }
 
 .barrage {
-  position: relative;
-  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 4;
 }
 
 .barrage__item {
   position: absolute;
   width: max-content;
-  font-size: 20px;
+  font-size: 10px;
   animation: barrageMove 10s ease-out infinite;
 }
 
@@ -49,7 +59,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 100px;
 }
 
 .barrage__form > p:nth-child(2),p:nth-child(3) {

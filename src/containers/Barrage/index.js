@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Draggable from 'react-draggable';
+// eslint-disable-next-line
 import axios from 'axios';
 import './style.css';
 
@@ -63,7 +64,7 @@ export default class Barrage extends Component {
 						/>
 					</Draggable>
 					<p>欢迎来到小肥橘猫妙妙屋</p>
-					<p>发个弹幕表达一下你的想法吧</p>
+					<p>发个弹幕吧</p>
 					<p>
 						<input
 							type="text"
