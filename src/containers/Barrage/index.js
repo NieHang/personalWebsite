@@ -105,7 +105,7 @@ export default class Barrage extends Component {
 				this.setState({
 					barrages: [
 						...this.state.barrages,
-						<BarrageItem key={this.state.key} value={this.state.value} />
+						<BarrageItem index={this.state.key} value={this.state.value} />
 					]
 				});
 			}
