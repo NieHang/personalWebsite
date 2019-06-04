@@ -1,6 +1,7 @@
 @media screen and (max-width: 960px) {
   .barrage__item {
-    left: 400px;
+    left: 75vw;
+    font-size: 4vw;
   }
 
   .barrage__form > img {
@@ -9,7 +10,7 @@
   
   @keyframes barrageMove {
     form {
-      left: 20vw;
+      left: 75vw;
     }
     to {
       left: -70vw;
@@ -23,7 +24,8 @@
   }
 
   .barrage__item {
-    left: 1000px;
+    left: 100vw;
+    font-size: 2vw;
   }
 
   .barrage__form > img {
@@ -51,7 +53,6 @@
 .barrage__item {
   position: absolute;
   width: max-content;
-  font-size: 10px;
   animation: barrageMove 10s ease-out;
 }
 

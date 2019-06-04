@@ -4,6 +4,8 @@ import Draggable from 'react-draggable';
 import axios from 'axios';
 import './style.css';
 
+import BarrageItem from './components/BarrageItem';
+
 export default class Barrage extends Component {
 	constructor(props) {
 		super(props);
@@ -11,7 +13,7 @@ export default class Barrage extends Component {
 			barrages: [
 				<div
 					className="barrage__item"
-					key='0'
+					key="0"
 					style={{
 						top: `${parseInt(Math.random(0, 10) * 10) * 20}px`,
 						color: `#ffffc2`,
@@ -95,28 +97,18 @@ export default class Barrage extends Component {
 	}
 
 	handleClick() {
-		this.setState((state, props) => ({
-			key: state.key+=1
-		}), () => {
-			this.setState({
-				barrages: [
-					...this.state.barrages,
-					/* 解决BUG 每次有新弹幕的时候，组件会重新渲染，会导致原来的弹幕位置和颜色产生变化 */
-					<div
-						className="barrage__item"
-						key={this.state.key}
-						style={{
-							top: `${parseInt(Math.random(0, 10) * 10) * 20}px`,
-							color: `rgba(${parseInt(Math.random(0, 1000) * 1000)}, ${parseInt(
-								Math.random(0, 1000) * 1000
-							)}, ${parseInt(Math.random(0, 1000) * 1000)})`,
-							animationDelay: `${parseInt(Math.random(0, 10) * 10) * 100}ms`
-						}}
-					>
-						{this.state.value}
-					</div>
-				]
-			});
-		})
+		this.setState(
+			(state, props) => ({
+				key: (state.key += 1)
+			}),
+			() => {
+				this.setState({
+					barrages: [
+						...this.state.barrages,
+						<BarrageItem key={this.state.key} value={this.state.value} />
+					]
+				});
+			}
+		);
 	}
 }
