@@ -10,8 +10,8 @@
 
 	.control__rhombus {
 		display: block;
-		width: 20px;
-		height: 20px;
+		width: 19px;
+		height: 19px;
 		transform: rotate(45deg) translateX(-17px);
 		border: 2px solid #ffffc2;
 	}
@@ -56,7 +56,7 @@
 	@keyframes controlBefore {
 		from {
 			opacity: 0;
-			left: -20px;
+			left: -30px;
 		}
 		to {
 			opacity: 1;
