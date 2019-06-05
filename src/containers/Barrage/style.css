@@ -7,6 +7,27 @@
   .barrage__form > img {
     width: 75px;
   }
+
+  .barrage__form > p:nth-child(4) {
+    width: 13vh;
+  }
+  
+  .barrage__form > p:nth-child(4) > input {
+    width: 9vh;
+    height: 3vh;
+    outline: #ffffc2;
+    border-radius: 10px;
+    border: 1px solid #eee;
+    font-size: 10px;
+    padding: 7px;
+    box-sizing: border-box;
+  }
+  
+  .barrage__form > p:nth-child(4) > img {
+    width: 9vw;
+    margin-left: 10px;
+    cursor: pointer;
+  }
   
   @keyframes barrageMove {
     form {
@@ -28,8 +49,18 @@
     font-size: 2vw;
   }
 
-  .barrage__form > img {
-    width: 150px;
+  .barrage__form > p:nth-child(4) {
+    width: 13vw;
+    height: 0;
+  }
+  
+  .barrage__form > p:nth-child(4) > input {
+    width: 9vw;
+    height: 10px;
+  }
+  
+  .barrage__form > p:nth-child(4) > img {
+    width: 5vw;
   }
   
   @keyframes barrageMove {
@@ -70,25 +101,19 @@
 .barrage__form > p:nth-child(4) {
   display: flex;
   align-items: center;
-  width: 220px;
-  height: 40px;
   border-radius: 5px;
   margin-top: 10px;
 }
 
 .barrage__form > p:nth-child(4) > input {
-  width: 150px;
-  height: 30px;
   outline: #ffffc2;
   border-radius: 5px;
   border: 1px solid #eee;
-  font-size: 20px;
-  padding: 10px;
+  padding: 7px;
   box-sizing: border-box;
 }
 
 .barrage__form > p:nth-child(4) > img {
-  width: 50px;
   margin-left: 10px;
   cursor: pointer;
 }
