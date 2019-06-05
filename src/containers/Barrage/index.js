@@ -11,17 +11,7 @@ export default class Barrage extends Component {
 		super(props);
 		this.state = {
 			barrages: [
-				<div
-					className="barrage__item"
-					key="0"
-					style={{
-						top: `${parseInt(Math.random(0, 10) * 10) * 20}px`,
-						color: `#ffffc2`,
-						animationDelay: `${parseInt(Math.random(0, 10) * 10) * 100}ms`
-					}}
-				>
-					这个世界需要英雄！
-				</div>
+				<BarrageItem key='hero' index={'hero'} value={'这个世界需要英雄！'} />
 			],
 			value: '',
 			key: 0
@@ -32,24 +22,6 @@ export default class Barrage extends Component {
 			<div className="barrage">
 				<div className="barrage__list">
 					{this.state.barrages.map(item => item)}
-					{/* BUG 每次有新弹幕的时候，组件会重新渲染，会导致原来的弹幕位置和颜色产生变化 */}
-					{/* {this.state.barrages.map((item, index) => (
-						<div
-							key={index}
-							className="barrage__item"
-							style={{
-								top: `${parseInt(Math.random(0, 10) * 10) * 20}px`,
-								color: `rgba(${parseInt(
-									Math.random(0, 1000) * 1000
-								)}, ${parseInt(Math.random(0, 1000) * 1000)}, ${parseInt(
-									Math.random(0, 1000) * 1000
-								)})`,
-								animationDelay: `${index * 100}ms`
-							}}
-						>
-							{item}
-						</div>
-					))} */}
 				</div>
 				<div className="barrage__form">
 					<Draggable
@@ -105,7 +77,7 @@ export default class Barrage extends Component {
 				this.setState({
 					barrages: [
 						...this.state.barrages,
-						<BarrageItem index={this.state.key} value={this.state.value} />
+						<BarrageItem key={this.state.key} value={this.state.value} />
 					]
 				});
 			}
