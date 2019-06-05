@@ -2708,6 +2708,15 @@ create-hmac@^1.1.0, create-hmac@^1.1.2, create-hmac@^1.1.4:
     safe-buffer "^5.0.1"
     sha.js "^2.4.8"
 
+create-react-class@^15.6.0:
+  version "15.6.3"
+  resolved "https://registry.yarnpkg.com/create-react-class/-/create-react-class-15.6.3.tgz#2d73237fb3f970ae6ebe011a9e66f46dbca80036"
+  integrity sha512-M+/3Q6E6DLO6Yx3OwrWjwHBnvfXXYA7W+dFjt/ZDBemHO1DDZhsalX/NUtnTYclN6GfnBDRh4qRHjcDHmlJBJg==
+  dependencies:
+    fbjs "^0.8.9"
+    loose-envify "^1.3.1"
+    object-assign "^4.1.1"
+
 create-react-context@^0.2.2:
   version "0.2.3"
   resolved "https://registry.yarnpkg.com/create-react-context/-/create-react-context-0.2.3.tgz#9ec140a6914a22ef04b8b09b7771de89567cb6f3"
@@ -3244,6 +3253,13 @@ dom-converter@^0.2:
   integrity sha512-gd3ypIPfOMr9h5jIKq8E3sHOTCjeirnl0WK5ZdS1AW0Odt0b1PaWaHdJ4Qk4klv+YB9aJBS7mESXjFoDQPu6DA==
   dependencies:
     utila "~0.4"
+
+dom-emit@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/dom-emit/-/dom-emit-1.1.2.tgz#c83e8ec469f74fef9fa08135a020372495eb143e"
+  integrity sha1-yD6OxGn3T++foIE1oCA3JJXrFD4=
+  dependencies:
+    polyfill-custom-event "^1.0.0"
 
 dom-helpers@^3.3.1:
   version "3.4.0"
@@ -3938,7 +3954,7 @@ fb-watchman@^2.0.0:
   dependencies:
     bser "^2.0.0"
 
-fbjs@^0.8.0:
+fbjs@^0.8.0, fbjs@^0.8.9:
   version "0.8.17"
   resolved "https://registry.yarnpkg.com/fbjs/-/fbjs-0.8.17.tgz#c4d598ead6949112653d6588b01a5cdcd9f90fdd"
   integrity sha1-xNWY6taUkRJlPWWIsBpc3Nn5D90=
@@ -4841,6 +4857,13 @@ imurmurhash@^0.1.4:
   version "0.1.4"
   resolved "https://registry.yarnpkg.com/imurmurhash/-/imurmurhash-0.1.4.tgz#9218b9b2b928a238b13dc4fb6b6d576f231453ea"
   integrity sha1-khi5srkoojixPcT7a21XbyMUU+o=
+
+in-stalk@^2.0.1:
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/in-stalk/-/in-stalk-2.1.2.tgz#3c9d555b78e32e2846ceb9eee4c1617d60b264ea"
+  integrity sha1-PJ1VW3jjLihGzrnu5MFhfWCyZOo=
+  dependencies:
+    dom-emit "^1.1.2"
 
 indexes-of@^1.0.1:
   version "1.0.1"
@@ -7236,6 +7259,11 @@ pnp-webpack-plugin@1.2.1:
   dependencies:
     ts-pnp "^1.0.0"
 
+polyfill-custom-event@^1.0.0:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/polyfill-custom-event/-/polyfill-custom-event-1.0.5.tgz#30666b313c326e8af4ffefb09915c9650f3ceda0"
+  integrity sha1-MGZrMTwybor0/++wmRXJZQ887aA=
+
 portfinder@^1.0.9:
   version "1.0.20"
   resolved "https://registry.yarnpkg.com/portfinder/-/portfinder-1.0.20.tgz#bea68632e54b2e13ab7b0c4775e9b41bf270e44a"
@@ -8275,7 +8303,7 @@ prompts@^0.1.9:
     kleur "^2.0.1"
     sisteransi "^0.1.1"
 
-prop-types@^15.6.0, prop-types@^15.6.2, prop-types@^15.7.2:
+prop-types@^15.5.10, prop-types@^15.6.0, prop-types@^15.6.1, prop-types@^15.6.2, prop-types@^15.7.2:
   version "15.7.2"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.7.2.tgz#52c41e75b8c87e72b9d9360e0206b99dcbffa6c5"
   integrity sha512-8QQikdH7//R2vurIJSutZ1smHYTcLpRWEOlHnzcWHmBYrOGUysKwSsrC89BCiFj3CbrfJ/nXFdJepOVrY1GCHQ==
@@ -8522,6 +8550,27 @@ react-is@^16.8.1:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.8.4.tgz#90f336a68c3a29a096a3d648ab80e87ec61482a2"
   integrity sha512-PVadd+WaUDOAciICm/J1waJaSvgq+4rHE/K70j0PFqKhkTBsPv/82UGQJNXAngz1fOQLLxI6z1sEDmJDQhCTAA==
 
+react-lazy-component@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/react-lazy-component/-/react-lazy-component-1.2.1.tgz#0f1d35ccbb9b69182a2e1af76e3e8425c0bb88b8"
+  integrity sha1-Dx01zLubaRgqLhr3bj6EJcC7iLg=
+  dependencies:
+    in-stalk "^2.0.1"
+    react "^15.0.2"
+
+react-lazyimg-component@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/react-lazyimg-component/-/react-lazyimg-component-0.0.2.tgz#f85663b1ace2b6bf03a67f58a253a9c0257efaa5"
+  integrity sha512-L4E+ABuly1/AJN3MRF1BRLapL72fj9OtJlBUcpVZafvSYGCAWG8xo/7NR11tKKW1Qdih8YeaqBp4foAC0LSaVQ==
+  dependencies:
+    prop-types "^15.6.1"
+    react-lazy-component "^1.2.1"
+
+react-lazyload@^2.6.1:
+  version "2.6.1"
+  resolved "https://registry.yarnpkg.com/react-lazyload/-/react-lazyload-2.6.1.tgz#666d4ca39a30589340dbaff98e9b205efe94ab30"
+  integrity sha512-DLQ8R47t6cryyZ5D/qzKuJ3dXu4N8gUwxYlcmk17UvgwG+nVjj9Riq82vWMRC01OGAT9uMNY+md4Ucpn9PmRAg==
+
 react-lifecycles-compat@^3.0.4:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
@@ -8577,6 +8626,17 @@ react-transition-group@^2.8.0:
     loose-envify "^1.4.0"
     prop-types "^15.6.2"
     react-lifecycles-compat "^3.0.4"
+
+react@^15.0.2:
+  version "15.6.2"
+  resolved "https://registry.yarnpkg.com/react/-/react-15.6.2.tgz#dba0434ab439cfe82f108f0f511663908179aa72"
+  integrity sha1-26BDSrQ5z+gvEI8PURZjkIF5qnI=
+  dependencies:
+    create-react-class "^15.6.0"
+    fbjs "^0.8.9"
+    loose-envify "^1.1.0"
+    object-assign "^4.1.0"
+    prop-types "^15.5.10"
 
 react@^16.8.6:
   version "16.8.6"

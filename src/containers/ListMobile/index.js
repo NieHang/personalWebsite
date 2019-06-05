@@ -11,6 +11,7 @@ export default class ListMobile extends Component {
 				<ul className="list__links">
 					<Link to="/" onClick={this.handleClick.bind(this, showList)}>Home</Link>
 					<Link to="/project" onClick={this.handleClick.bind(this, showList)}>Project</Link>
+					<Link to="/study" onClick={this.handleClick.bind(this, showList)}>Study</Link>
 					<Link to="/barrage" onClick={this.handleClick.bind(this, showList)}>Barrage</Link>
 					<div className="list__contacts">
 						<img

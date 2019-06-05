@@ -6,6 +6,7 @@ import ListMobile from '../ListMobile';
 import Header from '../../components/Header';
 import Project from '../Project';
 import Barrage from '../Barrage';
+import Study from '../Study';
 
 class App extends Component {
 	constructor() {
@@ -24,6 +25,7 @@ class App extends Component {
 						changeListStatus={this.changeListStatus.bind(this)}
 						status={this.state.showList}
 					/>
+					<Route path='/study' component={Study}/>
 					<Route path="/barrage" exact component={Barrage} />
 					<Route path="/project" exact component={Project} />
 					<Route path="/" exact component={Home} />

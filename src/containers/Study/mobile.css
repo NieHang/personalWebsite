@@ -1,0 +1,63 @@
+@media screen and (max-width: 960px) {
+  .back {
+		position: fixed;
+		width: 7vw;
+		height: 7vw;
+		background: url('http://ww1.sinaimg.cn/large/006AIROBly1g3q398q20fj305k05kwed.jpg') no-repeat;
+		background-size: cover;
+    bottom: 17vh;
+    right: 17vw;
+		cursor: pointer;
+		opacity: 1;
+		transition: opacity .5s ease;
+	}
+  
+  .study__item {
+		margin-bottom: 5vh;
+	}
+
+	.study__item > .item__title {
+		color: #515A6E;
+		font-weight: bold;
+		font-size: 20px;
+		margin-bottom: 20px;
+	}
+
+	.study__item > .item__wrap {
+		display: grid;
+    grid-template-columns: repeat(auto-fill, 33%);
+	}
+
+	.item__wrap > .item__web {
+    display: flex;
+		justify-content: center;
+		margin-bottom: 20px;
+	}
+
+	.item__web > a {
+		display: block;
+		width: 20vw;
+		height: 12vh;
+		background-color: #fff;
+		border-radius: 5px;
+		border: 1px solid #ccc;
+		text-align: center;
+		padding: 20px;
+		box-sizing: border-box;
+    cursor: pointer;
+    transition: all .5s ease;
+  }
+  
+  .item__web > a > img {
+		width: 10vw;
+		height: 10vw;
+  }
+  
+  .item__web > a p {
+    font-size: 1px;
+    color: #6278de;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+	}
+}
