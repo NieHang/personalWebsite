@@ -10,7 +10,6 @@
 	right: 0;
 	bottom: 0;
 	cursor: pointer;
-	transform: translateX(0);
 	background-color: #fc5d42;
 	border-left: 2px solid #ffffc2;
 	transition: all 0.5s ease-in;
