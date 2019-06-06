@@ -13,7 +13,8 @@ class App extends Component {
 		super();
 		this.state = {
 			status: false,
-			showList: false
+			showList: false,
+			renderListMobile: false
 		};
 	}
 
@@ -33,15 +34,28 @@ class App extends Component {
 						changeBgColor={this.changeBgColor.bind(this)}
 						status={this.state.status}
 					/>
-					<ListMobile
-						showList={this.state.showList}
-						bgColor={this.state.status}
-						changeListStatus={this.changeListStatus.bind(this)}
-					/>
+					{
+						this.state.renderListMobile 
+							? 
+							<ListMobile
+								showList={this.state.showList}
+								bgColor={this.state.status}
+								changeListStatus={this.changeListStatus.bind(this)}
+							/>
+							:
+							''
+					}
 				</Router>
 			</div>
 		);
 	}
+
+	componentDidMount() {
+		this.setState({
+			renderListMobile: document.documentElement.clientWidth > 960 ? false : true
+		})
+	}
+	
 
 	changeBgColor(status) {
 		if (status === false) {
