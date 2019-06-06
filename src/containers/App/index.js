@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import Home from '../Home';
+import Home from '../Home/loadable';
 import Control from '../Control';
 import ListMobile from '../ListMobile';
 import Header from '../../components/Header';
-import Project from '../Project';
-import Barrage from '../Barrage';
-import Study from '../Study';
+import Project from '../Project/loadable';
+import Barrage from '../Barrage/loadable';
+import Study from '../Study/loadable';
 
 class App extends Component {
 	constructor() {
