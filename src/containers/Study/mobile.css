@@ -3,7 +3,7 @@
 		position: fixed;
 		width: 7vw;
 		height: 7vw;
-		background: url('http://ww1.sinaimg.cn/large/006AIROBly1g3q398q20fj305k05kwed.jpg') no-repeat;
+		background: url('https://i.loli.net/2019/06/06/5cf86f9e2ae5713005.jpg') no-repeat;
 		background-size: cover;
     bottom: 17vh;
     right: 17vw;
@@ -54,7 +54,7 @@
   }
   
   .item__web > a p {
-    font-size: 1px;
+    font-size: 10px;
     color: #6278de;
     overflow: hidden;
     text-overflow:ellipsis;
