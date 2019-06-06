@@ -1,4 +1,27 @@
+@import './mobile.css';
+@import './pc.css';
+
 .wrap {
   height: 100%;
   background-color: #333f6a;
+}
+
+.content {
+  position: absolute;
+  display: flex;
+  height: 300px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 3;
+}
+
+.content__title {
+  text-align: center;
+  font-size: 1.8em;
+  color: #ffffc2;
 }
