@@ -13,8 +13,7 @@ class App extends Component {
 		super();
 		this.state = {
 			status: false,
-			showList: false,
-			renderListMobile: false
+			showList: false
 		};
 	}
 
@@ -26,7 +25,7 @@ class App extends Component {
 						changeListStatus={this.changeListStatus.bind(this)}
 						status={this.state.showList}
 					/>
-					<Route path='/study' component={Study}/>
+					<Route path='/study' exact component={Study}/>
 					<Route path="/barrage" exact component={Barrage} />
 					<Route path="/project" exact component={Project} />
 					<Route path="/" exact component={Home} />
@@ -35,7 +34,7 @@ class App extends Component {
 						status={this.state.status}
 					/>
 					{
-						this.state.renderListMobile 
+						this.state.showList 
 							? 
 							<ListMobile
 								showList={this.state.showList}
@@ -49,14 +48,7 @@ class App extends Component {
 			</div>
 		);
 	}
-
-	componentDidMount() {
-		this.setState({
-			renderListMobile: document.documentElement.clientWidth > 960 ? false : true
-		})
-	}
 	
-
 	changeBgColor(status) {
 		if (status === false) {
 			this.setState({
