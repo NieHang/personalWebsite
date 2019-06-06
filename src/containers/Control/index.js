@@ -26,7 +26,7 @@ export default class Control extends Component {
 				</div>
 				<img
 					className={status ? 'control__cat' : 'control__cat__Y'}
-					src="https://i.loli.net/2019/04/05/5ca6f2b2db40d.jpg"
+					src="https://i.loli.net/2019/06/06/5cf879562670f81334.jpg"
 					alt="caihongCat"
 				/>
 			</div>
