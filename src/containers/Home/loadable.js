@@ -7,7 +7,7 @@ const LoadableComponent = Loadable({
   loader: () => import('./'),
   loading() {
     return (
-      <ReactLoading className='loading' type='bars' color="#fff" height={'10vw'} width={'10vw'}/>
+      <ReactLoading className='loading' type='bars' color="#ffffc2" height={'10vw'} width={'10vw'}/>
     )
   }
 });
