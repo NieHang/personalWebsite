@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-import './style.css';
+import './css/style.css';
 
 export default class ListMobile extends Component {
 	render() {

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Draggable from 'react-draggable';
 // eslint-disable-next-line
 import axios from 'axios';
-import './style.css';
+import './css/style.css';
 
 import BarrageItem from './components/BarrageItem';
 

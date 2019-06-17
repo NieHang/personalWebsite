@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Item from './components/Item';
-import './style.css';
+import './css/style.css';
 
 export default class Project extends Component {
 	constructor(props) {

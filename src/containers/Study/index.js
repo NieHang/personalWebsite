@@ -3,7 +3,7 @@ import axios from 'axios';
 import ItemWeb from './components/ItemWeb';
 import { throttle } from 'lodash';
 
-import './style.css';
+import './css/style.css';
 
 export default class Study extends Component {
 	constructor(props) {
