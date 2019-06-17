@@ -1,95 +1,77 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import './style.css';
+import './css/style.css';
 
-export default class Header extends Component {
-	constructor(props) {
-		super(props);
-		this.state = {
-			isMobile: false
-		};
-		this.resize.bind(this);
-	}
+const Header = props => {
+	const { status, changeListStatus } = props;
+	const [isMobile, setIsMobile] = useState(false);
 
-	render() {
-		const { status } = this.props;
-		let Component;
-		if (!this.state.isMobile) {
-			Component = function() {
-				return (
-					<nav className="header__list">
-						<Link to="/">Home</Link>
-						<Link to="/project">Project</Link>
-						<Link to="/study">Study</Link>
-						<Link to="/barrage">Barrage</Link>
-					</nav>
-				);
-			};
-		} else {
-			Component = () => {
-				return (
-					<span
-						className="header__list"
-						onClick={this.showList.bind(this, status)}
-					>
-						· · ·
-					</span>
-				);
-			};
+	const screenChange = () => {
+		window.addEventListener('resize', resize);
+	};
+
+	const resize = () => {
+		setIsMobile(document.body.clientWidth > 960 ? false : true)
+	};
+
+	useEffect(
+		() => {
+			if (document.body.clientWidth < 960) {
+				setIsMobile(true);
+			}
+			screenChange();
+		},
+		() => {
+			window.removeEventListener('resize', resize);
 		}
+	);
 
-		return (
-			<header className="header">
-				<Link to="/" className="header__title">
-					<img
-						src="https://i.loli.net/2019/04/03/5ca4a63c11e58.png"
-						alt="CAT.png"
-						title="CAT.png"
-					/>
-					<div className="cat">
-						<span>小</span>
-						<span>肥</span>
-						<span>橘</span>
-						<span>猫</span>
-					</div>
-				</Link>
-				<Component />
-			</header>
-		);
-	}
-
-	componentDidMount() {
-		if (document.body.clientWidth < 960) {
-			this.setState({
-				isMobile: true
-			});
-		}
-		this.screenChange();
-	}
-
-	screenChange() {
-		window.addEventListener('resize', this.resize);
-	}
-
-	resize = () => {
-		if (document.body.clientWidth > 960) {
-			this.setState({
-				isMobile: false
-			});
-		} else {
-			this.setState({
-				isMobile: true
-			});
+	const showList = status => {
+		if (changeListStatus) {
+			changeListStatus(status);
 		}
 	};
 
-	componentWillUnmount() {
-		window.removeEventListener('resize', this.resize);
+	let Component;
+	if (!isMobile) {
+		Component = function() {
+			return (
+				<nav className="header__list">
+					<Link to="/">Home</Link>
+					<Link to="/project">Project</Link>
+					<Link to="/study">Study</Link>
+					<Link to="/barrage">Barrage</Link>
+				</nav>
+			);
+		};
+	} else {
+		Component = () => {
+			return (
+				<span className="header__list" onClick={() => showList(status)}>
+					· · ·
+				</span>
+			);
+		};
 	}
 
-	showList(showList) {
-		if (this.props.changeListStatus) {
-			this.props.changeListStatus(showList);
-		}
-	}
-}
+	return (
+		<header className="header">
+			<Link to="/" className="header__title">
+				<img
+					src="https://i.loli.net/2019/04/03/5ca4a63c11e58.png"
+					alt="CAT.png"
+					title="CAT.png"
+				/>
+				<div className="cat">
+					<span>小</span>
+					<span>肥</span>
+					<span>橘</span>
+					<span>猫</span>
+				</div>
+			</Link>
+			<Component />
+		</header>
+	);
+};
+
+export default Header;
