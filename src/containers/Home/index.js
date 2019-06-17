@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/accessible-emoji */
 import React, { useState } from 'react';
-import ImgItem from './components/ImgItem/ImgItem';
+import ImgItem from './components/ImgItem';
 import './css/style.css';
 
 export default function Home() {
