@@ -3,10 +3,6 @@
     width: 300px;
   }
 
-  .item > a {
-    width: 200px;
-  }
-
   .item__name {
     height: 80px;
   }
@@ -27,7 +23,6 @@
   
   .item > a {
     width: 400px;
-    height: 250px;
   }
 
   .item__name {
@@ -51,9 +46,8 @@
 }
 
 .item > a {
+  position: relative;
   display: inline-block;
-  margin: 0 auto;
-  overflow: hidden;
 }
 
 .item__img {

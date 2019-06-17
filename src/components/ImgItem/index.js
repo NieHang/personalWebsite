@@ -1,15 +1,16 @@
 import React, { useState } from 'react';
 import ReactLoading from 'react-loading';
+import { relative } from 'upath';
 
 export default function ImgItem(props) {
 	const [imgState, setImgState] = useState(false);
 
-  function handleLoad() {
-    setImgState(true)
-  }
+	function handleLoad() {
+		setImgState(true);
+	}
 
 	return (
-		<a href={props.url} target="_block">
+		<a href={props.url} target="_block" style={{position: relative}}>
 			<img
 				src={props.imgUrl}
 				onLoad={handleLoad}
@@ -29,5 +30,5 @@ export default function ImgItem(props) {
 				/>
 			)}
 		</a>
-  );
+	);
 }
