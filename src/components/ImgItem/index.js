@@ -14,7 +14,8 @@ export default function ImgItem(props) {
 				src={props.imgUrl}
 				onLoad={handleLoad}
 				data-index={props.index}
-				alt="博客园"
+				alt=""
+				className={props.className || ''}
 			/>
 			{imgState ? (
 				''
@@ -22,7 +23,7 @@ export default function ImgItem(props) {
 				<ReactLoading
 					className="loading"
 					type="bars"
-					color="#fff"
+					color="#ffffc2"
 					height={'5vw'}
 					width={'5vw'}
 				/>
