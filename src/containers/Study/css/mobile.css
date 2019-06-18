@@ -29,23 +29,21 @@
 	}
 
 	.item__wrap > .item__web {
-    display: flex;
+		display: flex;
+		align-items: center;
 		justify-content: center;
 		margin-bottom: 20px;
+		width: 20vw;
+		height: 12vh;
+		border-radius: 5px;
+		border: 1px solid #ccc;
 	}
 
 	.item__web > a {
 		display: block;
-		width: 20vw;
-		height: 12vh;
+		width: 100%;
 		background-color: #fff;
-		border-radius: 5px;
-		border: 1px solid #ccc;
 		text-align: center;
-		padding: 5vw;
-		box-sizing: border-box;
-    cursor: pointer;
-    transition: all .5s ease;
   }
   
   .item__web > a > img {
