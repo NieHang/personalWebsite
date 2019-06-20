@@ -39,7 +39,7 @@ body {
 a {
 	text-decoration: none;
 }
-ol, ul {
+ol, ul, li {
 	list-style: none;
 }
 blockquote, q {

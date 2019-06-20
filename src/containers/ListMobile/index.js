@@ -32,6 +32,9 @@ export default function ListMobile(props) {
 				<Link to="/study" onClick={() => handleClick(showList)}>
 					Study
 				</Link>
+				<Link to="/tools" onClick={() => handleClick(showList)}>
+					Tools
+				</Link>
 				<Link to="/barrage" onClick={() => handleClick(showList)}>
 					Barrage
 				</Link>

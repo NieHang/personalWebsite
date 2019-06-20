@@ -1,0 +1,71 @@
+@media screen and (max-width: 960px) {
+  
+  .tools {
+    height: 25vh;
+  }
+  
+  .tools__nav {
+    position: absolute;
+    left: -20vw;
+    width: 20vw;
+    height: 100%;
+    background-color: #fff;
+    padding: 2vw;
+    box-sizing: border-box;
+    color: #545d71;
+    transition: all .5s ease;
+  }
+
+  .hidden {
+    left: -40vw;
+  }
+  
+  .toggle {
+    position: absolute;
+    top: 0;
+    right: -4vw;
+    background-color: #fff;
+    width: 5vw;
+    height: 5vw;
+    text-align: center;
+    line-height: 5vw;
+    border-radius: .667vw;
+  }
+  
+  .tools__nav > li {
+    position: relative;
+    cursor: pointer;
+    height: 15px;
+    line-height: 15px;
+    margin-bottom: 5vw;
+    font-size: 3vw;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+  }
+  
+  .tools__nav > li > i {
+    width: 10px;
+    font-size: 2vw;
+    margin-right: 5px;
+  }
+  
+  .tools__nav > li:hover {
+    color: #6278de;
+  }
+  
+  .tools__nav > .liActive {
+    color: #6278de;
+  }
+
+  .tools__content {
+    position: relative;
+    background-color: #fff;
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    border-radius: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+}

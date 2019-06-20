@@ -1,0 +1,13 @@
+@import './pc.css';
+@import './mobile.css';
+
+.tools {
+  position: absolute;
+  width: 60%;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 3;
+}

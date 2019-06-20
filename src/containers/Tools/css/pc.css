@@ -1,0 +1,57 @@
+@media screen and (min-width: 960px) { 
+  .tools {
+    height: 400px;
+  }
+  
+  .tools__nav {
+    width: 20%;
+    height: 100%;
+    background-color: #fff;
+    padding: 1.333vw;
+    box-sizing: border-box;
+    border-radius: .667vw;
+    color: #545d71;
+    float: left;
+  }
+  
+  .tools__nav > li {
+    position: relative;
+    cursor: pointer;
+    height: 2vw;
+    line-height: 2vw;
+    margin-bottom: .667vw;
+  }
+  
+  .tools__nav > li > i {
+    width: 10px;
+    font-size: 15px;
+    margin-right: 5px;
+  }
+  
+  .tools__nav > li:hover {
+    color: #6278de;
+  }
+  
+  .tools__nav > .liActive {
+    color: #6278de;
+  }
+  
+  .tools__nav > .liActive::after {
+    content: "";
+    position: absolute;
+    right: -1.333vw;
+    width: .267vw;
+    height: 100%;
+    background-color: #6278de;
+  }
+  
+  .tools__content {
+    position: relative;
+    margin-left: 22%;
+    background-color: #fff;
+    height: 100%;
+    border-radius: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+}

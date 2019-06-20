@@ -1,0 +1,12 @@
+@media screen and (max-width: 960px) {
+  .compress__info > p {
+    font-size: 10px;
+  }
+
+  .compress__info > .compress__select {
+    width: 10vw;
+    font-size: 10px;
+    height: 3vw;
+    line-height: 3vw;
+  }
+}
