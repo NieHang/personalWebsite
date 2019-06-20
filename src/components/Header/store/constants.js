@@ -1,0 +1,3 @@
+const IS_MOBILE = 'HEADER_IS_MOBILE'
+
+export { IS_MOBILE }

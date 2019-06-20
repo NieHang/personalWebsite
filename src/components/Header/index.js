@@ -1,23 +1,25 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { actionCreators } from './store'
+import { connect } from "react-redux";
 import './css/style.css';
 
 const Header = props => {
-	const { status, changeListStatus } = props;
-	const [isMobile, setIsMobile] = useState(false);
+	const { status, changeListStatus, getIsMobile, isMobile } = props;
 
 	const screenChange = () => {
 		window.addEventListener('resize', resize);
 	};
 
 	const resize = () => {
-		setIsMobile(document.body.clientWidth > 960 ? false : true)
+		getIsMobile(document.body.clientWidth > 960 ? false : true)
 	};
 
 	useEffect(
 		() => {
 			if (document.body.clientWidth < 960) {
-				setIsMobile(true);
+				// setIsMobile(true);
+				getIsMobile(true)
 			}
 			screenChange();
 		},
@@ -40,6 +42,7 @@ const Header = props => {
 					<Link to="/">Home</Link>
 					<Link to="/project">Project</Link>
 					<Link to="/study">Study</Link>
+					<Link to="/tools">Tools</Link>					
 					<Link to="/barrage">Barrage</Link>
 				</nav>
 			);
@@ -74,4 +77,14 @@ const Header = props => {
 	);
 };
 
-export default Header;
+const mapState = state => ({
+	isMobile: state.header.isMobile
+})
+
+const mapDispatch = dispatch => ({
+	getIsMobile(status) {
+		dispatch(actionCreators.isMobile(status))
+	}
+})
+
+export default connect(mapState, mapDispatch)(Header);
