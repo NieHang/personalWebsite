@@ -89,7 +89,6 @@ const Compression = () => {
 	};
 
 	const handleChange = e => {
-		console.log(12)
 		file = e.target.files[0];
 		if (file !== undefined) {
 			getSuffix(file.name);
@@ -97,6 +96,9 @@ const Compression = () => {
         reader.readAsDataURL(file);
         generateImg()
 			}
+			// 为了防止第二次提交同一个文件触发不了第二次事件的bug
+			// 这里将第一次文件内容设置为 空 即可
+			e.target.value = ''
 		}
 	};
 
